@@ -30,7 +30,7 @@ Skill 调用统计  (week)
 
 ## Installation
 
-Add to your `opencode.json`:
+### 1. Add the plugin
 
 ```json
 {
@@ -38,7 +38,25 @@ Add to your `opencode.json`:
 }
 ```
 
-Restart OpenCode. The plugin registers a `/skill-stats` command and the `skill_stats` tool.
+### 2. Register the slash command (optional but recommended)
+
+Add a `command` entry so you can type `/skill-stats` in chat:
+
+```json
+{
+  "plugin": ["opencode-skill-stats"],
+  "command": {
+    "skill-stats": {
+      "template": "Call skill_stats tool to show skill invocation statistics.",
+      "description": "查询 skill 调用频率统计"
+    }
+  }
+}
+```
+
+If you skip this step, you can still use the plugin by asking the AI to "show skill stats" — the AI will call the `skill_stats` tool automatically.
+
+Restart OpenCode after making changes.
 
 ## Usage
 
