@@ -1,0 +1,41 @@
+{
+  "name": "opencode-skill-stats",
+  "version": "1.0.0",
+  "description": "Track and visualize skill invocation frequency in OpenCode sessions — ASCII bar charts, periodic filtering, auto-discovery of installed skills",
+  "type": "module",
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  },
+  "files": [
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "skill-stats",
+    "statistics",
+    "telemetry"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vcza5/opencode-skill-stats.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@opencode-ai/plugin": "^1.15.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "bun-types": "^1.3.14",
+    "typescript": "^6.0.3"
+  }
+}
